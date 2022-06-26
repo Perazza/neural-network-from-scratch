@@ -3,6 +3,18 @@
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
 
-mnist-data:
+## INPUT
+mnist-data-train:
   type: pandas.CSVDataSet
   filepath: data/01_raw/train.csv
+
+## OUTPUT CHART
+plot-cost-function:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/cost_function.png
+
+## OUTPUT PKL
+final-model-pkl:
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/nn_model.pkl.lz4
+  backend: pickle
