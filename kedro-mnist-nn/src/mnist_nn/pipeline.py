@@ -32,7 +32,7 @@ def create_pipeline(**kwargs) -> Pipeline:
                 func=plot_cost_function,
                 inputs= "final-model-pkl",
                 outputs= "plot-cost-function",
-                name="plt_cfunction",
+                name="plot_cost_function",
             ),
         ]
     )
